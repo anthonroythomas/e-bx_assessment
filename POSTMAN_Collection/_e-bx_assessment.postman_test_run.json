@@ -1,0 +1,73 @@
+{
+	"id": "8cb5bca6-2bee-40f4-a4ab-771a69dccc67",
+	"name": "_e-bx_assessment",
+	"timestamp": "2022-10-07T13:52:16.002Z",
+	"collection_id": "0-6c78696a-86db-4ffa-93a3-1d9a86702d22",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 5,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "8210a2e3-3697-431a-ab4c-f6c42a3c6b6d",
+			"name": "/api/v1/{owner}/{repo}/contributors",
+			"url": "https://api.github.com/repos/DFE-Digital/technical-guidance/contributors?per_page=30",
+			"time": 304,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Body matches string": true,
+				"Successful POST request": true,
+				"Array contains name of a valid user": true,
+				"count of arrays/ contributors is 30": true,
+				"count of logins within arrays is 30 ": true
+			},
+			"testPassFailCounts": {
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Array contains name of a valid user": {
+					"pass": 1,
+					"fail": 0
+				},
+				"count of arrays/ contributors is 30": {
+					"pass": 1,
+					"fail": 0
+				},
+				"count of logins within arrays is 30 ": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				304
+			],
+			"allTests": [
+				{
+					"Body matches string": true,
+					"Successful POST request": true,
+					"Array contains name of a valid user": true,
+					"count of arrays/ contributors is 30": true,
+					"count of logins within arrays is 30 ": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 304,
+	"collection": {
+		"requests": [
+			{
+				"id": "8210a2e3-3697-431a-ab4c-f6c42a3c6b6d",
+				"method": "GET"
+			}
+		]
+	}
+}
