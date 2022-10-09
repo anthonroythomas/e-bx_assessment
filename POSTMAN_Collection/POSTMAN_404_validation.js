@@ -14,7 +14,7 @@ describe("Tests that an invalid response returns 404", function() {
        pm.expect(pm.response.text()).to.include("Either owner or repo does not exist on GitHub");
 	});
 
-    it('Should have a status code in the 400 range', () => {
+    it('Should have a status code of 404', () => {
        pm.expect(pm.response.code).to.be.oneOf([404]);
 	});
 
