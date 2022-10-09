@@ -21,14 +21,11 @@ describe("Tests the Github contributors api", function() {
        pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);
 	});
 
-    it('Should contain an key with a name of a valid github user', () => {
+    it('Should contain the property login and not be null', () => {
        const jsdonData = pm.response.json();
-       pm.expect( jsdonData[0].login).to.eql('himal-mandalia');
+      //pm.expect( jsdonData[0].login).to.eql('himal-mandalia');//removed assertion as this assumes the user is always be present, better  to test not null
+       pm.expect(jsdonData[0].login).to.not.be.oneOf([null, ""])
 	});
 
-    it('Should have an array / contributors count of 30"', () => {
-       const jsdonData = pm.response.json();
-       pm.expect( jsdonData[0].login).to.eql('himal-mandalia');
-	});
 
 });
