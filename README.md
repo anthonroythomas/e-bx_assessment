@@ -1,2 +1,2 @@
-# e-bx_assessment
+# interview_assessment
 A repo to check my work
